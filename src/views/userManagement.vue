@@ -50,42 +50,8 @@ export default {
 </script>
 
 <style scoped>
-@media screen and (max-width: 1920px) {
-    
-    }
-
-
-    @media screen and (max-width: 1440px) {
-    #usermanage {
-        zoom:67%
-    }
-    }
-
-    @media screen and (max-width: 1024px) {
-    #usermanage {
-        width: 960px;
-        max-width: 960px;
-    }
-    }
-
-    @media screen and (max-width: 768px) {
-    #usermanage {
-        width: 718px;
-        max-width: 718px;
-    }
-    }
-
-    @media screen and (max-width: 425px) {
-    #myaccount {
-        width: 375px;
-        max-width: 375px;
-    }
-    }
-
-    @media screen and (max-width: 375px) {
-    #usermanage {
-        width: 340px;
-        max-width: 340px;
-    }
-    }
+  #usermanage{
+    height: 100vh;
+    overflow-y:hidden ;
+  }
 </style>
