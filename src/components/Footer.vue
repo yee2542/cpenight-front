@@ -209,6 +209,9 @@ export default {};
 </script>
 
 <style scoped>
+*{
+  z-index: 2;
+}
 #pinkfooter{
   background-color: #f17f92; padding-top: 58px;
 }

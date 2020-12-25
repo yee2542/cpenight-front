@@ -107,6 +107,7 @@ export default {
   #Usermenu{
     box-shadow: 15px 0 15px -2px rgba(0,0,0,.20);
     z-index: 2;
+    height: 100vh;
   }
 
   #menu-container{

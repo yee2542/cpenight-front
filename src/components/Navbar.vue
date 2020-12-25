@@ -1,16 +1,14 @@
 <template>
   <div class="section">
     <body id="navbar">
-      <header>
+      <div class="header">
         <div class="navbar-container">
           <input type="checkbox" name="" id="check" />
           <div class="logo-container">
             <img src="@/assets/Navbar/Nav_Logo.png" />
           </div>
 
-          <div
-            class="nav-btn"
-          >
+          <div class="nav-btn">
             <div class="nav-links">
               <ul style="padding: 0">
                 <li class="nav-link" style="--i: 0.6s">
@@ -101,7 +99,6 @@
                     justify-content: center;
                     align-items: center;
                     font-size: 2em;
-                    background-color: #f28093;
                   "
                   href="/login"
                   class="btn transparent"
@@ -109,7 +106,8 @@
                 >
               </div>
               <a style="margin: 0px; padding: 0px" href="/userManagement">
-                <div id="changelag"
+                <div
+                  id="changelag"
                   style="
                     display: flex;
                     justify-content: center;
@@ -132,7 +130,7 @@
             </div>
           </div>
         </div>
-      </header>
+      </div>
       <main>
         <section>
           <div class="overlay"></div>
@@ -152,6 +150,9 @@ export default {};
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+.navbar-container{
+  height: 80px;
+}
 #navbar {
   position: fixed; /* Set the navbar to fixed position */
   top: 0;
@@ -159,11 +160,11 @@ export default {};
   z-index: 999;
 }
 
-#changelag{
+#changelag {
   margin-left: 40px;
 }
 
-#login_text{
+#login_text {
   padding-left: 51px;
 }
 
@@ -181,16 +182,12 @@ a {
   text-decoration: none;
 }
 
-header {
-  position: sticky;
-  top: 0px;
+.header {
   background-color: rgba(58, 56, 117, 1);
+  height: 100%;
   width: 100%;
-  height: 80px;
   z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 0px;
 }
 
 section {
@@ -278,8 +275,25 @@ section {
 
 .btn.transparent,
 .btn.solid:hover {
-  background-color: transparent;
+  background-color: #f17f92;
   color: #fff;
+}
+
+li:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: -30px;
+  content: "";
+  display: block;
+  height: 10px;
+  left: 50%;
+  position: absolute;
+  background: #f17f92;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+li:hover:after {
+  width: 100%;
+  left: 3px;
 }
 
 .nav-links > ul {
@@ -439,10 +453,10 @@ section {
 #check {
   position: absolute;
   top: 50%;
-  right: 1.5rem;
+  right: 2rem;
   transform: translateY(-50%);
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 4rem;
+  height: 4rem;
   z-index: 90000;
   cursor: pointer;
   opacity: 0;
@@ -473,12 +487,22 @@ section {
 }
 
 @media screen and (max-width: 768px) {
+  .logo-container{
+    height: 50px;
+  }
+
+  li:after {
+    display: none;
+  }
+  li:hover:after {
+    display: none;
+  }
 
   .hamburger-menu-container {
     display: flex;
   }
 
-  ul{
+  ul {
     margin: 0;
   }
 
@@ -514,13 +538,13 @@ section {
 
   .nav-links {
     flex: initial;
-    border-top: 1px solid rgb(255, 255, 255,0.5);
+    border-top: 1px solid rgb(255, 255, 255, 0.5);
     width: 100%;
     margin: 0;
   }
 
-  .nav-link > a{
-    margin:0px;
+  .nav-link > a {
+    margin: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -544,7 +568,7 @@ section {
 
   .nav-link:hover > a {
     transform: scale(1);
-    background-color: #50a9d6;
+    background-color: transparent;
   }
 
   .dropdown,
@@ -557,7 +581,7 @@ section {
     pointer-events: auto;
     width: 100%;
     padding: 0;
-    background-color: #3183ac;
+    background-color: transparent;
     display: none;
   }
 
@@ -592,14 +616,14 @@ section {
 
   .arrow {
     z-index: 1;
-    background-color: #69bde7;
+    background-color: transparent;
     left: 10%;
     transform: scale(1.1) rotate(45deg);
     transition: 0.5s;
   }
 
   .nav-link:hover .arrow {
-    background-color: #50a9d6;
+    background-color: transparent;
   }
 
   .dropdown .dropdown .arrow {
@@ -607,11 +631,11 @@ section {
   }
 
   .dropdown-link:hover > a {
-    background-color: #3a91bd;
+    background-color: transparent;
   }
 
   .dropdown-link:first-child:hover ~ .arrow {
-    background-color: #50a9d6;
+    background-color: transparent;
   }
 
   .nav-link > a > i {
@@ -636,23 +660,23 @@ section {
     padding: 0;
   }
 
-  .btn{
+  .btn {
     height: 20px;
     width: 100%;
   }
 
-
-  #login_text{
-    margin:0;
+  #login_text {
+    margin: 0;
     padding: 1.6rem 2rem;
     background-color: #f17f92;
-    width:100vw ;
+    width: 100vw;
   }
 
-  .log-sign > a, #login_text,#changelag{
-    margin:0;
+  .log-sign > a,
+  #login_text,
+  #changelag {
+    margin: 0;
     padding: 1.6rem 2rem;
   }
-
 }
 </style>

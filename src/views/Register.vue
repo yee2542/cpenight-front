@@ -64,6 +64,7 @@ export default {
 
   .vs__searching{
     pointer-events: none;
+    z-index: 6;
   }
 
   .style-chooser .vs__dropdown-menu {

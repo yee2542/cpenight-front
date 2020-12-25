@@ -259,6 +259,10 @@ export default {
     padding-top:65px;
     padding-left: 108px;
     padding-right:130px;
+
+    height: 100vh;
+    overflow-y:hidden ;
+  
   }
 
   .title{
