@@ -1,20 +1,6 @@
 <template>
   <div id="mainpage">
     <Navbar></Navbar>
-    <vue-particles
-                    color="#dedede"
-                    :particleOpacity="0.7"
-                    :particlesNumber="100"
-                    shapeType="circle"
-                    :particleSize="3"
-                    :lineLinked="false"
-                    :moveSpeed="1.5"
-                    :hoverEffect="false"
-                    hoverMode="grab"
-                    :clickEffect="true"
-                    clickMode="push"
-                >
-                </vue-particles>
     <!-- First Section-->
     <link
       rel="stylesheet"

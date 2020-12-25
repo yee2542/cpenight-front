@@ -12,10 +12,6 @@ export default {
 
 <style>
 
-*{
-  z-index: 1;
-}
-
 body,
 html {
   padding: 0;
@@ -29,9 +25,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index:2;
 }
-
 
 @font-face {
   font-family: "CloudLight";
@@ -49,13 +43,6 @@ html {
   max-width: 1440px;
 }
 
-#particles-js {
-    position : fixed;
-    width:100%;
-    height:100%;
-    z-index:0;
-}
-
 .navbar-container {
   width: 1440px;
   max-width: 1440px;
@@ -63,7 +50,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1001;
+  z-index: 4;
 }
 
 @media screen and (max-width: 1920px) {
